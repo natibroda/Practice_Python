@@ -1,3 +1,3 @@
 # Practice_Python
 
-# Contains various practice scripts
+Contains various practice scripts
