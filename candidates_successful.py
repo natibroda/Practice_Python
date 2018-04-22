@@ -1,8 +1,10 @@
-# This programme simulates NHS STP recruitment system - candidates are presented with a corresponding interview score 
-# and a list of locations in order of preference. Highest scoring candidate gets their first location preference, next one gets their 
-# first location preference, unless it's already taken, then they get their second choice etc.
+# This programme simulates NHS STP recruitment system - candidates are
+# presented with a corresponding interview score
+# and a list of locations in order of preference.
+# Highest scoring candidate gets their first location preference, next one gets
+# their first location preference, unless it's already taken,
+# then they get their second choice etc.
 # Once all locations are filled applicants are added to the reserve list.
-
 
 # dictionary
 candidates = {
@@ -47,13 +49,14 @@ options = []
 # iterate through the ranking list from higest to lowest,
 # checking each candidates options
 #number of locations available = 6 = max length of options
+num_locations = 6
 
 for rank in ranking:
     # iterate through options checking if already taken
     choices = candidates[rank][1]
 #    print(choices)
     for choice in choices:
-        if len(options) <= 6:
+        if len(options) <= num_locations:
             if choice in options:
                 continue
             else:
@@ -67,7 +70,7 @@ for rank in ranking:
 #assign that option to the candidate in a dictionary
 successful = {}
 
-for i in range(0,6):
+for i in range(0,num_locations):
     name = ranking[i]
     location = options[i]
     successful[name] = location
@@ -79,7 +82,7 @@ for person, location in successful.items():
 #if all options already taken, put on reserve list
 reserve = []
 
-for i in range(6,len(ranking)):
+for i in range(num_locations,len(ranking)):
     name1 = ranking[i]
     reserve.append(name1)
 
