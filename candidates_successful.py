@@ -1,3 +1,9 @@
+# This programme simulates NHS STP recruitment system - candidates are presented with a corresponding interview score 
+# and a list of locations in order of preference. Highest scoring candidate gets their first location preference, next one gets their 
+# first location preference, unless it's already taken, then they get their second choice etc.
+# Once all locations are filled applicants are added to the reserve list.
+
+
 # dictionary
 candidates = {
 'Anna': [41, ['Newcastle', 'Leeds', 'Birmingham']],
