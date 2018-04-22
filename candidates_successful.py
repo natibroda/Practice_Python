@@ -59,8 +59,8 @@ for rank in ranking:
             else:
                 options.append(choice)
                 break
-    else:
-        break
+        else:
+            break
 
 # print(options)
 
