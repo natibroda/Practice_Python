@@ -22,7 +22,7 @@ candidates = {
 scores = []
 for candidate in candidates:
     score = candidates[candidate][0]
-    scores.append(candidates[candidate][0])
+    scores.append(score)
 
 # print(sorted(scores))
 
